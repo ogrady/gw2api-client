@@ -13,12 +13,14 @@ import * as continents from './responses/continents'
 import * as colors from './responses/colors'
 import * as dailycrafting from './responses/dailycrafting'
 import * as emblems from './responses/emblems'
+import * as legends from './responses/legends'
 import * as mailcarriers from './responses/mailcarriers'
 import * as minis from './responses/minis'
 import * as skins from './responses/skins'
 import * as titles from './responses/titles'
 import * as tokeninfo from './responses/tokeninfo'
 import * as nodes from './responses/nodes'
+import * as traits from './responses/traits'
 
 export interface Schema extends BaseSchema {
     // Achievements
@@ -56,6 +58,9 @@ export interface Schema extends BaseSchema {
     Gliders: gliders.Schema_1970_01_01.Glider
     // Continents
     Continents: continents.Schema_1970_01_01.Continent
+    Floor: continents.Schema_1970_01_01.Floor
+    // Legends
+    Legends: legends.Schema_1970_01_01.Legend
     // Mailcarriers
     Mailcarriers: mailcarriers.Schema_1970_01_01.Mailcarrier
     // Minis
@@ -66,6 +71,8 @@ export interface Schema extends BaseSchema {
     Titles: titles.Schema_1970_01_01.Title
     // Tokeninfo
     Tokeninfo: tokeninfo.Schema_1970_01_01.TokenInfo
+    // Trait
+    Traits: traits.Schema_1970_01_01.Trait
     // Skins
     Skins: skins.Schema_1970_01_01.Skin
 }
