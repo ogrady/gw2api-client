@@ -5,9 +5,10 @@ module.exports = {
     '@typescript-eslint'
   ],
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    //'eslint:recommended',
+    //'plugin:@typescript-eslint/eslint-recommended',
+    //'plugin:@typescript-eslint/recommended',
+    '@devoxa'
   ],
   rules: {
     semi: [2, 'never'],
