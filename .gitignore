@@ -1,4 +1,8 @@
 dist/
+
+# Test Mocks
+tests/types/mocks/*
+
 # Logs
 npm-debug.log*
 
