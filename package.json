@@ -8,7 +8,7 @@
     "test:types": "jest tests/types/apis.test.ts",
     "lint": "standard",
     "tsc:test": "npx tsc --project tsconfig.test.json && cp -r ./tests/types/mocks ./dist/tests/types",
-    "apimocks": "npx ts-node scripts/testmocks.ts"
+    "apimocks": "npx ts-node scripts/testmock.ts"
   },
   "author": "queicherius@gmail.com",
   "license": "MIT",
