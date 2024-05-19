@@ -1,9 +1,10 @@
 import { AbstractEndpoint } from '../endpoint'
+import { Schema } from './schemas/schema'
 
 type GuildID = string
 type LogID = number
 
-export class GuildEndpoint extends AbstractEndpoint {
+export class GuildEndpoint<S extends Schema> extends AbstractEndpoint<S["Guild"]> {
   private id: GuildID
 
   constructor (client, id: GuildID) {
@@ -15,6 +16,7 @@ export class GuildEndpoint extends AbstractEndpoint {
     this.cacheTime = 60 * 60
   }
 
+  // @ts-expect-error
   get (id: number) {
     return super.get(`/${id}`, true)
   }
