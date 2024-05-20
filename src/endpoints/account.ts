@@ -148,7 +148,7 @@ export class AccountEndpoint<S extends Schema> extends AbstractEndpoint<S["Achie
   }
 }
 
-class AchievementsEndpoint extends AbstractEndpoint {
+class AchievementsEndpoint <S extends Schema> extends AbstractEndpoint<S["Achievements"]> {
   constructor (client) {
     super(client)
     this.url = '/v2/account/achievements'
@@ -162,6 +162,7 @@ class AchievementsEndpoint extends AbstractEndpoint {
     return Promise.reject(new Error('method not supported for this endpoint'))
   }
 
+  // @ts-expect-error
   get (id) {
     if (id) {
       return super.get(id)
@@ -172,6 +173,7 @@ class AchievementsEndpoint extends AbstractEndpoint {
     return this.all()
   }
 
+  // @ts-expect-error
   all () {
     return super.get('', true)
   }

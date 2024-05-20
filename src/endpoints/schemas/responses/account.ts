@@ -11,7 +11,7 @@ import { ISO8601 } from "../../../types"
 type Access = 'None' | 'PlayForFree' | 'GuildWars2' | 'HeartOfThorns' | 'PathOfFire' | 'EndOfDragons'
 
 export namespace Schema_1970_01_01 {
-  /** {@link https://wiki.guildwars2.com/API:2/account} */
+  /** {@link https://wiki.guildwars2.com/wiki/API:2/account} */
   export interface Account {
     /** The unique persistent account GUID. */
     id: string

@@ -143,9 +143,14 @@ export class AbstractEndpoint<T = any> {
   }
 
   // Get a single entry by id
+  /**
+   * @deprecated get does not accept no parameters, but implementations frequently call it as such
+   * @todo once we resolve this, also make id? in third overload non-optional
+   */
+  public async get (): Promise<T | any>;
   public async get (id: string, url?: true): Promise<T>;
   public async get (id: number, url?: false): Promise<T>;
-  public async get (id: number | string, url: boolean = false): Promise<T> {
+  public async get (id?: number | string, url: boolean = false): Promise<T> {
     this.debugMessage(`get(${this.url}) called`)
 
     if (!id && this.isBulk && !url) {

@@ -2,7 +2,9 @@
     "compilerOptions": {
       "outDir": "./dist",
       "allowJs": true,
-      "target": "es6"
+      "target": "es6",
+      "skipLibCheck": true,
+      "lib": ["ESNext.String"]
     },
     "include": ["./src/**/*"]
   }

@@ -9,6 +9,7 @@ export class BuildEndpoint<S extends Schema> extends AbstractEndpoint<S["Build"]
     this.cacheTime = 60
   }
 
+  // @ts-expect-error
   get (): Promise<number> {
     // FIXME: bug? Formerly, no ID was passed, which would cause an error in the nullish check in super.get()
     return super.get(-1).then(result => result.id)
